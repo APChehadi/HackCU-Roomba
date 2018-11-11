@@ -17,18 +17,25 @@ def nothing(x):
 #low[45, 215, 0]
 #high[85, 255, 166]
 
+#Final values
+#low[57, 73, 65]
+#high[88, 255, 255]
 
-# flag top middle, flag center middle, flag bottom middle, left pole middle, right pole middle (in m)
-# array 
-tracking_points = []
+
+#Top center, middle center, bottom center (m)
+tracking_points = [
+	[0, 0, 0], 
+	[0, .12, 0],
+	[0, .24, 0]
+]
 
 cv2.namedWindow("Trackbars")
-cv2.createTrackbar("L - H", "Trackbars", 45, 179, nothing)
-cv2.createTrackbar("L - S", "Trackbars", 215, 255, nothing)
-cv2.createTrackbar("L - V", "Trackbars", 0, 255, nothing)
-cv2.createTrackbar("U - H", "Trackbars", 85, 179, nothing)
+cv2.createTrackbar("L - H", "Trackbars", 57, 179, nothing)
+cv2.createTrackbar("L - S", "Trackbars", 73, 255, nothing)
+cv2.createTrackbar("L - V", "Trackbars", 65, 255, nothing)
+cv2.createTrackbar("U - H", "Trackbars", 88, 179, nothing)
 cv2.createTrackbar("U - S", "Trackbars", 255, 255, nothing)
-cv2.createTrackbar("U - V", "Trackbars", 166, 255, nothing)
+cv2.createTrackbar("U - V", "Trackbars", 255, 255, nothing)
 
 _, frame = cap.read()
 print("width: " + str(cap.get(cv2.CAP_PROP_FRAME_WIDTH)))
@@ -106,8 +113,6 @@ while True:
 		x, y = i.ravel()
 		cv2.circle(frame,(x,y), 3, 255, -1)
 	'''
-
-	
 
 
 	cv2.imshow('frame', frame)
