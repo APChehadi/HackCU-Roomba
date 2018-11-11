@@ -53,10 +53,12 @@ if __name__ == "__main__":
                 if (abs(xPos - 320) < 200):
                     if(zSize > zRangemax):
                         vel = 0
+                        if (zSize - 20) > zRangemax:
+                            vel = -200
                     elif(zSize < zRangemin):
-                        vel = 350
+                        vel = 500
                     else:
-                        vel = 100
+                        vel = 200
                     bot.drive_straight(vel)
                     print(vel)
                 elif(abs(xPos - 320) > 200):
