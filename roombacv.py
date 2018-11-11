@@ -70,8 +70,3 @@ class RoombaCV:
 			except:
 				return False, None, None
 		return False, None, None
-
-
-rb = RoombaCV()
-while True:
-	rb.readFrame()

@@ -5,6 +5,7 @@
 
 from __future__ import print_function
 import pycreate2
+from roombacv import RoombaCV
 import time
 import os
 
@@ -42,11 +43,43 @@ if __name__ == "__main__":
     rv = RoombaCV()
 
     def alterTraject():
+        while (True):
+            ret = rv.readFrame()
+            if (ret[0]):
+                zSize = ret[2]
+                xPos = ret[1][0]
+                print("zSize: " + str(ret[2]))
+                print("xPos: " + str(ret[1][0]))
+                if (abs(xPos - 320) < 200):
+                    if(zSize > zRangemax):
+                        vel = 0
+                    elif(zSize < zRangemin):
+                        vel = 350
+                    else:
+                        vel = 100
+                    bot.drive_straight(vel)
+                    print(vel)
+                elif(abs(xPos - 320) > 200):
+                    vel = 200
+                    if(xPos - 320 < 0):
+                        print("left turn")
+                        bot.drive_turn(vel / 1.5, 1)
+                    else:
+                        bot.drive_turn(vel / 1.5, -1)
+
+        '''
         ret = rv.readFrame()
+
         accurate = ret[0]
         zSize = ret[2]
         xPos = ret[1][0]
         while(True):
+            print("hello")
+            ret = rv.readFrame()
+            accurate = ret[0]
+            xPos = ret[1][0]
+            zSize = ret[2]
+            print(xPos)
             while(accurate):
                 while(abs(xPos) < 200):
                     if(zSize > zRangemax):
@@ -58,9 +91,10 @@ if __name__ == "__main__":
                     bot.drive_straight(vel)
                     print(vel)
                     ret = rv.readFrame()
-                    xPos = ret[0][1]()
-                    zSize = ret[2]()
-                    accurate = ret[0]()
+                    xPos = ret[1][0]
+                    print(xPos)
+                    zSize = ret[2]
+                    accurate = ret[0]
                     if(not accurate):
                         break
                 if(abs(xPos) > 200):
@@ -71,6 +105,9 @@ if __name__ == "__main__":
                         bot.drive_turn(vel, 1)
                     ret = rv.readFrame()
                     accurate = ret[0]
+         '''
+    
+
     bot.start()
     bot.safe()
     zSize = 100
