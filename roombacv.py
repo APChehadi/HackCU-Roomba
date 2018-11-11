@@ -57,9 +57,21 @@ class RoombaCV:
 				if len(approx) == 4:
 					#success
 					center = (int(M['m10']/M['m00']), int(M['m01']/M['m00']))
-					top = (cnt[cnt[:,:,1].argmin()][0])
-					height = top + ((center[1] - top) / 2)
+					top = cnt[cnt[:,:,1].argmin()][0]
+					bottom = cnt[cnt[:,:,1].argmax()][0]
+					left = cnt[cnt[:,:,0].argmin()][0]
+					right = cnt[cnt[:,:,0].argmax()][0]
+
+					dy = bottom[1] - top[1]
+					dy2 = abs(left[1] - right[1])
+
+					height = int((dy + dy2) / 2)
 					return True, center, height
 			except:
 				return False, None, None
 		return False, None, None
+
+
+rb = RoombaCV()
+while True:
+	rb.readFrame()
