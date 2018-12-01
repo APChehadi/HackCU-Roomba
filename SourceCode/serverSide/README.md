@@ -13,7 +13,7 @@ main code is on routes.py
 
 to run
 
-flask run (in virtual env)
+    $flask run (in virtual env)
 
 # ngrok
 
