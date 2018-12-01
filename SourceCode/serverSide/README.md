@@ -1,6 +1,6 @@
 # create virtual environment
-  $python -m venv venv
-  $source venv/bin/activate
+    $python -m venv venv
+    $source venv/bin/activate
   
 # install packages
 
@@ -17,6 +17,6 @@ flask run (in virtual env)
 
 # ngrok
 
-ngrok http 5000 (or whatever port it is running on)
+    $ngrok http 5000 (or whatever port it is running on)
 
 url is the https on ngrok
