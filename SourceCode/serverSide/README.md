@@ -1,8 +1,8 @@
-# create virtual env
+# create virtual environment
   $python -m venv venv
   $source venv/bin/activate
   
-#install packages
+# install packages
 
 flask
 pycreate2
@@ -15,7 +15,7 @@ to run
 
 flask run (in virtual env)
 
-#ngrok
+# ngrok
 
 ngrok http 5000 (or whatever port it is running on)
 
