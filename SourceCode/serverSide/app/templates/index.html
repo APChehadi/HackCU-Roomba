@@ -7,14 +7,14 @@
     <title>index</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
         .medium {
             padding:20px;
         }
         .large {
             padding:90px;
-            
+
         }
         .controler{
             background-color:#00ffcc;
@@ -40,15 +40,15 @@
     <div class= "container text-center">
 
         <h1><a href = "#">Click here for the live stream</a></h1>
- 
-    </div>  
+
+    </div>
 
     <div id="controls">
         <div class="container controlertops text-center">
             <div class="col-sm-12">
                 <div class="medium text-center">
                     <form action="/setup/" method="post">
-                        <button class="btn btn-success" name="setupbtn" type="submit">Lock On</button>
+                        <button class="w3-btn w3-red w3-round-large" name="setupbtn" type="submit">TAKE CONTROL</button>
                     </form>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                 <div class="col-sm-12">
                     <div class="medium text-center">
                         <form action="/MoveForward/" method="post">
-                            <button class="btn btn-primary" name="turnbtn" type="submit">Forward</button>
+                            <button class="w3-btn w3-black w3-round-xxlarge" name="turnbtn" type="submit"> &uarr; </button>
                         </form>
                     </div>
                 </div>
@@ -68,14 +68,14 @@
                     <div class="col-sm-6">
                         <div class="medium text-center">
                             <form action="/turnLeft/" method="post">
-                                <button class="btn btn-primary" name="turnbtn" type="submit"> &#8592; </button>
+                                <button class="w3-btn w3-black w3-round-xxlarge" name="turnbtn" type="submit"> &#8592; </button>
                             </form>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="medium text-center">
                             <form action="/turnRight/" method="post">
-                                <button class="btn btn-primary" name="turnbtn" type="submit"> &#8594; </button>
+                                <button class="w3-btn w3-black w3-round-xxlarge" name="turnbtn" type="submit"> &#8594; </button>
                             </form>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                 <div class="col-sm-12">
                     <div class="medium text-center">
                         <form action="/MoveBackward/" method="post">
-                            <button class="btn btn-primary" name="turnbtn" type="submit"> Backward </button>
+                            <button class="w3-btn w3-black w3-round-xxlarge" name="turnbtn" type="submit"> &darr; </button>
                         </form>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
             <div class="col-sm-12">
                 <div class="medium text-center">
                     <form action="/stop/" method="post">
-                        <button class="btn btn-danger" name="turnbtn" type="submit">stop</button>
+                        <button class="w3-btn w3-red w3-round-large" name="turnbtn" type="submit">STOP</button>
                     </form>
                 </div>
             </div>
@@ -109,7 +109,7 @@
         </div>
     </div>
     <div class="container">
-        
+
     </div>
 
 
