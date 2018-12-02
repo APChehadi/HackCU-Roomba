@@ -32,6 +32,12 @@
         .col-xs-6 {
           margin: 0 auto;
         }
+
+        .circularButton {
+          width: 200px;
+          height: 200px;
+          font-size: 80px;
+        }
     </style>
     {% if scrollToAnchor %}
     <script>
@@ -66,14 +72,14 @@
                 <div class="col-xs-6">
                     <div class="medium text-center">
                         <form action="/MoveForward/" method="post">
-                            <button class="w3-btn w3-black w3-circle" name="turnbtn" type="submit"> &uarr; </button>
+                            <button class="circularButton w3-btn w3-black w3-circle" name="turnbtn" type="submit"> &uarr; </button>
                         </form>
                     </div>
                 </div>
                 <div class="col-xs-6">
                     <div class="medium text-center">
                         <form action="/MoveBackward/" method="post">
-                            <button class="w3-btn w3-black w3-circle" name="turnbtn" type="submit"> &darr; </button>
+                            <button class="circularButton w3-btn w3-black w3-circle" name="turnbtn" type="submit"> &darr; </button>
                         </form>
                     </div>
                 </div>
@@ -84,14 +90,14 @@
                     <div class="col-xs-6">
                         <div class="medium text-center">
                             <form action="/turnLeft/" method="post">
-                                <button class="w3-btn w3-black w3-circle" name="turnbtn" type="submit"> &#8592; </button>
+                                <button class="circularButton w3-btn w3-black w3-circle" name="turnbtn" type="submit"> &#8592; </button>
                             </form>
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <div class="medium text-center">
                             <form action="/turnRight/" method="post">
-                                <button class="w3-btn w3-black w3-circle" name="turnbtn" type="submit"> &#8594; </button>
+                                <button class="circularButton w3-btn w3-black w3-circle" name="turnbtn" type="submit"> &#8594; </button>
                             </form>
                         </div>
                     </div>
