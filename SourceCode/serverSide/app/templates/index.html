@@ -16,15 +16,13 @@
             padding:90px;
 
         }
-        .controler{
-            background-color:#00ffcc;
-            border:2px solid black;
-        }
 
-
-        .controlertops{
-            background-color:#ffff66;
-            border:2px solid black;
+        #controllerArea {
+          background-color: lightgray;
+          border-radius: 35px;
+          margin: auto;
+          width: 66%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     </style>
     {% if scrollToAnchor %}
@@ -39,12 +37,13 @@
 <body>
     <div class= "container text-center">
 
-        <h1><a href = "#">Click here for the live stream</a></h1>
+        <h1><a href = "#">Live Stream</a></h1>
 
     </div>
 
     <div id="controls">
-        <div class="container controlertops text-center">
+        <section id="controllerArea">
+        <div class="container text-center">
             <div class="col-sm-12">
                 <div class="medium text-center">
                     <form action="/setup/" method="post">
@@ -53,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <div class="controler container">
+        <div class="container">
             <div class="container text-center">
                 <div class="col-sm-12">
                     <div class="medium text-center">
@@ -93,7 +92,7 @@
             </div>
         </div>
 
-        <div class="container controlertops text-center">
+        <div class="container text-center">
             <div class="col-sm-12">
                 <div class="medium text-center">
                     <form action="/stop/" method="post">
@@ -102,6 +101,7 @@
                 </div>
             </div>
         </div>
+        </section>
         <div class="container text-center">
             <div class="col-sm-12">
                 <h2>Robot is: {{ forward_message }}</h2>
