@@ -23,8 +23,7 @@ baud = {
     'alt': 19200  # shouldn't need this unless you accidentally set it to this
     }
 
-#bot = pycreate2.Create2(port=port, baud=baud['default'])
-bot = pycreate2.Create2(port='/dev/ttyUSB0', baud=baud['default'])
+bot = pycreate2.Create2(port=port, baud=baud['default'])
 
 
 @app.route('/')
