@@ -12,7 +12,7 @@
         .medium {
             padding:20px;
         }
-        .large {
+        large {
             padding:90px;
 
         }
@@ -27,6 +27,10 @@
 
         h1 {
           color: #005eff;
+        }
+
+        .col-xs-6 {
+          margin: 0 auto;
         }
     </style>
     {% if scrollToAnchor %}
@@ -48,7 +52,7 @@
     <div id="controls">
         <section id="controllerArea">
         <div class="container text-center">
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <div class="medium text-center">
                     <form action="/setup/" method="post">
                         <button class="w3-btn w3-red w3-round-large" name="setupbtn" type="submit">TAKE CONTROL</button>
@@ -96,7 +100,7 @@
             </div>
         </div>
         <div class="container text-center">
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <div class="medium text-center">
                     <form action="/stop/" method="post">
                         <button class="w3-btn w3-red w3-round-large" name="turnbtn" type="submit">STOP</button>
@@ -106,7 +110,7 @@
         </div>
         </section>
         <div class="container text-center">
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <h2>Robot is: {{ forward_message }}</h2>
             </div>
         </div>
